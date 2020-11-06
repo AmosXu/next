@@ -4,15 +4,60 @@
     .markdown-body {
         font-size: 14px;
     }
+
     .markdown-body .hljs {
         font-size: 14px;
         padding: 0;
     }
+
+    .next-demo-item {
+        border: 1px solid #EEE;
+        margin: 40px 0;
+    }
+
+    .next-demo-playground {
+        margin-top: 40px;
+    }
+
+    .next-demo-playground a {
+        text-decoration: none;
+    }
+
+    .next-demo-mount {
+        padding: 20px 40px;
+        border-bottom: 1px solid #EEE;
+    }
+
+    .next-demo-desc {
+        padding: 20px 40px;
+    }
+
+    .next-demo-body {
+        padding: 20px 40px;
+        border-top: dashed #EEE 1px;
+    }
 </style>
-<div class="next-demo-section">
-    <div class="markdown-body">
-        <%- readmeHTML %>
+<div id="demo-area" class="next-demo-section">
+    <div id="md-area-former" class="markdown-body">
+        <%- readmeFormer %>
+    </div>
+
+    <div id="md-area-latter" class="markdown-body">
+        <%- readmeLatter %>
     </div>
 </div>
 
+<!-- <div id="demo-area" class="next-demo-section">
+    <div id="md-area-down" class="markdown-body">
+        <%- readmeHTML %>
+    </div>
+</div> -->
+
+<script src="//shadow.elemecdn.com/npm/babel-polyfill@6.26.0/dist/polyfill.min.js"></script>
+<script src="//shadow.elemecdn.com/npm/react@16.13.0/umd/react.development.js"></script>
+<script src="//shadow.elemecdn.com/npm/react-dom@16.13.0/umd/react-dom.development.js"></script>
+<script src="//shadow.elemecdn.com/npm/moment@2.24.0/min/moment-with-locales.js"></script>
+<% scripts.forEach(function(src) { %>
+<script src="<%= src %>"></script>
+<% })%>
 <% include partials/footer %>

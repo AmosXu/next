@@ -22,7 +22,7 @@ if events are triggered by '+' button or '-' button, you can get event type from
 import { NumberPicker } from '@alifd/next';
 
 function onChange(value, e) {
-    console.log(value, e.type, e.triggerType);
+    console.log(value, e);
 }
 
 ReactDOM.render(
